@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Excess Warehouse</title>
+
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/removeProduct.css">
+</head>
+
+<body>
+<header th:replace="/fragments.html :: header"></header>
+
+<div id="content">
+    <form id="removeProduct-form" th:method="post">
+        <p th:if(info) th:text="${info}" id="registrationErrorInfo"></p>
+        <p>Provide ID: </p>
+        <input type="text" placeholder="ID" th:field="*{productModel.id}">
+        <input type="submit" value="Remove">
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+#login-form{
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#login-form input[type=text]{
+    width: 80%;
+    display: inline-block;
+    margin: 10px auto;
+    font-size: 22px;
+    padding: 4px;
+}
+
+#login-form input[type=password]{
+    width: 80%;
+    display: inline-block;
+    margin: 5px auto;
+    font-size: 22px;
+    padding: 4px;
+}
+
+#login-form input[type=submit]{
+    width: 200px;
+    margin: 10px auto;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#registration-link{
+    display:block;
+    font-size: 18px;
+    text-decoration: none;
+}

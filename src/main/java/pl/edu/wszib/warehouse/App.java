@@ -1,11 +1,12 @@
 package pl.edu.wszib.warehouse;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import pl.edu.wszib.warehouse.GUI.IGUI;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class App {
     public static void main(String[] args) {
-        new AnnotationConfigApplicationContext(AppConfiguration.class).getBean(IGUI.class).showMainMenu();
+        SpringApplication.run(App.class, args);
     }
 }

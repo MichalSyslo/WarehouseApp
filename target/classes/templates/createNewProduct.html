@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Excess Warehouse</title>
+
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/createNewProduct.css">
+</head>
+
+<body>
+<header th:replace="/fragments.html :: header"></header>
+
+<div id="content">
+    <form id="addProduct-form" th:method="post">
+        <p th:if(info) th:text="${info}" id="registrationErrorInfo"></p>
+        <p>Provide product name: </p>
+        <input type="text" placeholder="Product name" th:field="*{productModel.name}">
+        <p>Provide quantity: </p>
+        <input type="text" placeholder="Quantity" th:field="*{productModel.quantity}">
+        <input type="submit" value="Create">
+    </form>
+</div>
+
+</body>
+</html>

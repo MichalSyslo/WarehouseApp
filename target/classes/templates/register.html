@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Excess Warehouse</title>
+
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/register.css">
+
+    <script src="registerValidator.js"></script>
+</head>
+
+<body>
+<header th:replace="/fragments.html :: header"></header>
+
+<div id="content">
+    <form id="register-form" th:method="post" onsubmit="return validate()">
+        <p th:if(info) th:text="${info}" id="registrationErrorInfo"></p>
+        <input type="text" placeholder="Login" th:field="*{registrationModel.login}" id="login">
+        <input type="password" placeholder="Password" th:field="*{registrationModel.password}" id="pass">
+        <input type="password" placeholder="Repeat password" th:field="*{registrationModel.password2}" id="pass2">
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+</body>
+</html>

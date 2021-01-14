@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Excess Warehouse</title>
+
+    <link rel="stylesheet" href="/common.css">
+</head>
+<body>
+<header th:fragment="header">
+    <div >
+        <img src="/warehouseLogo.png" id="logo">
+    </div>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="/home" class="menu-button">  Home </a></li>
+            <li><a href="/contact" class="menu-button"> Contact </a></li>
+            <li><a href="/login" class="menu-button" th:if="${!isLogged}"> Login </a>
+                <a href="/logout" class="menu-button" th:if="${isLogged}"> Logout </a></li>
+        </ul>
+    </nav>
+</header>
+
+</body>
+</html>

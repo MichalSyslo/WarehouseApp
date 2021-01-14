@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Excess Warehouse</title>
+
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+    <header th:replace="/fragments.html :: header"></header>
+
+    <div id="content">
+        <div class="first-box">
+            <a th:href="@{/createNewProduct}" th:if="${role == 'ADMIN'}" class="createNewProduct-button"></a>
+            <a th:href="@{/removeProduct}" th:if="${role == 'ADMIN'}" class="removeProductFromDataBase-button"></a>
+        </div>
+        <th:block th:each="product : ${products}">
+            <div class="product-box">
+                <div th:text="${product.name}" class="product-name-box" ></div>
+                <div class="product-data-box">
+                    <div th:text="'Quantity: ' + ${product.quantity}"></div>
+                    <div th:text="'ID: ' + ${product.id}" class="product-id-box"></div>
+                </div>
+                <a th:href="@{/addProduct/{id}(id=${product.id})}" th:if="${isLogged}" class="plus-button"></a>
+                <a th:href="@{/subtractProduct/{id}(id=${product.id})}" th:if="${isLogged}" class="minus-button"></a>
+                <a th:href="@{/edit/{id}(id=${product.id})}" th:if="${role == 'ADMIN'}" class="edit-button"></a>
+            </div>
+        </th:block>
+
+    </div>
+
+</body>
+</html>

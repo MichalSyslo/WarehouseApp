@@ -1,0 +1,27 @@
+#removeProduct-form{
+    font-size: 20px;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+#removeProduct-form input[type=text]{
+    width: 80%;
+    display: inline-block;
+    margin: -10px auto 10px auto;
+    font-size: 22px;
+    padding: 4px;
+}
+
+#removeProduct-form input[type=submit]{
+    width: 200px;
+    margin: 15px auto;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#registrationErrorInfo{
+     font-size: 20px;
+     color: red;
+ }

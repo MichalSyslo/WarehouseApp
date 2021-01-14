@@ -1,0 +1,82 @@
+.product-box{
+    border: 2px solid black;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.product-name-box{
+    font-size: 26px;
+    padding: 5px;
+}
+
+.product-data-box{
+    font-size: 20px;
+}
+
+.product-data-box div{
+    display: inline-block;
+    padding: 5px;
+}
+
+.product-id-box{
+    float: right;
+    margin-right: 800px;
+}
+
+.first-box{
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.createNewProduct-button{
+    background-image: url("createNewProduct.png");
+    width: 40px;
+    height: 40px;
+    float: right;
+    display: block;
+    background-size: contain;
+}
+
+.removeProductFromDataBase-button{
+    background-image: url("/removeProduct.png");
+    width: 40px;
+    height: 40px;
+    float: right;
+    display: block;
+    background-size: contain;
+    margin-right: 7px;
+}
+
+.edit-button{
+    background-image: url("/edit.png");
+    width: 40px;
+    height: 40px;
+    float: right;
+    display: block;
+    background-size: contain;
+    margin-top: -45px;
+    margin-right: 120px;
+}
+
+.minus-button{
+    background-image: url("/minus.png");
+    width: 40px;
+    height: 40px;
+    float: right;
+    display: block;
+    background-size: contain;
+    margin-top: -45px;
+    margin-right: 45px;
+}
+
+.plus-button{
+    background-image: url("/plus.png");
+    width: 40px;
+    height: 40px;
+    float: right;
+    display: block;
+    background-size: contain;
+    margin-top: -45px;
+    margin-right: 5px;
+}
