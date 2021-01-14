@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-#subtractProduct-form input[type=text]{
+#subtractProduct-form input[type=number]{
     width: 80%;
     display: inline-block;
     margin: -10px auto 10px auto;

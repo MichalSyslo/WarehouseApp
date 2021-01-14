@@ -31,10 +31,17 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public boolean updateProduct(Product product) {
-        if(this.productDAO.getProductByName(product.getName()) != null) {
+        if(this.productDAO.getProductByName(product.getName()) != null ) {
             this.sessionObject.setInfo("Product with given name already exists");
             return false;
+        } else if(product.getQuantity() < 0){
+            this.sessionObject.setInfo("Please provide positive amount");
+            return false;
+        } else if (product.getName().length() == 0){
+            this.sessionObject.setInfo("Please provide correct product name");
+            return false;
         }
+
         this.productDAO.updateProduct(product);
         return true;
     }
@@ -43,6 +50,12 @@ public class ProductServiceImpl implements IProductService {
     public boolean createNewProduct(Product product) {
         if(this.productDAO.getProductByName(product.getName()) != null) {
             this.sessionObject.setInfo("Such product already exists");
+            return false;
+        }else if(product.getQuantity() < 0){
+            this.sessionObject.setInfo("Please provide positive amount");
+            return false;
+        } else if (product.getName().length() == 0){
+            this.sessionObject.setInfo("Please provide correct product name");
             return false;
         }
 

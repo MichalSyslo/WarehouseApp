@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-#removeProduct-form input[type=text]{
+#removeProduct-form input[type=number]{
     width: 80%;
     display: inline-block;
     margin: -10px auto 10px auto;

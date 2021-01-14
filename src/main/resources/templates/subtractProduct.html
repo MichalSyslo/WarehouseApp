@@ -16,7 +16,7 @@
     <form id="subtractProduct-form" th:method="post">
         <p th:if(info) th:text="${info}" id="registrationErrorInfo"></p>
         <p>Provide quantity: </p>
-        <input type="text" placeholder="Quantity" th:field="*{productModel.quantity}">
+        <input type="number" placeholder="Quantity" th:field="*{productModel.quantity}">
         <input type="submit" value="Subtract">
     </form>
 </div>

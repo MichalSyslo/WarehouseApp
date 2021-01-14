@@ -16,7 +16,7 @@
     <form id="removeProduct-form" th:method="post">
         <p th:if(info) th:text="${info}" id="registrationErrorInfo"></p>
         <p>Provide ID: </p>
-        <input type="text" placeholder="ID" th:field="*{productModel.id}">
+        <input type="number" placeholder="ID" th:field="*{productModel.id}">
         <input type="submit" value="Remove">
     </form>
 </div>
