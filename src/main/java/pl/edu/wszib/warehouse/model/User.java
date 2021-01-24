@@ -1,8 +1,14 @@
 package pl.edu.wszib.warehouse.model;
 
+import javax.persistence.*;
+
+@Entity(name = "tuser")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String login, password;
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     public User(int id, String login, String password, Role role) {
